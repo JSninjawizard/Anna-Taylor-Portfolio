@@ -268,6 +268,7 @@ html {
     background-color: var(--hightlight);
 }
 
+
 /* -=----------------- ABOUT ME -----------------------=- */
 .about-me__title {
     font-size: calc(8rem + 8vw);
@@ -283,10 +284,18 @@ html {
     display: flex;
 }
 
+.about-me__wrapper--image-container,
+.about-me__wrapper--text { 
+    flex: 1;
+}
+
 .about-me__wrapper--image {
     height: 100%;
     width: 100%;
     filter: grayscale(100%);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
 }
 
 .about-me__wrapper--text {
@@ -296,11 +305,12 @@ html {
 }
 
 .about-me__text--main {
-    font-size: 2.5rem;
-    margin: 0 10rem;
+    /* font-size: 1.8rem; */
+    font-size: calc(1.5rem + 0.5vw);
+    margin: 0 calc(3rem + 0.4vw);
     font-family: var(--font-com-sans);
     font-weight: 400;
-    line-height: 5rem;
+    line-height: 4rem;
 }
 
 
@@ -324,7 +334,7 @@ html {
 
 .skills__container--design,
 .skills__container--app {
-    flex-basis: 80rem;
+    flex-basis: 60rem;
 }
 
 .design__card,
@@ -503,6 +513,13 @@ label {
 .message__container--label::after {
     content: ":";
     position: absolute;
+    top: 1rem;
+}
+
+/* 1280px */
+.message__container--label::after {
+    content: ":";
+    position: absolute;
     top: -1rem;
 }
 
@@ -563,6 +580,8 @@ input[type="tel"] {
     transition: all 0.3s ease-in;
 
 }
+
+
 
 .sumbit__container--btn:hover {
     color: var(--hightlight)
