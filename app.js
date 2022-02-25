@@ -63,3 +63,56 @@ right.addEventListener("click", function () {
   nextCard.classList.add("current-card");
   nextCard.classList.add("active-card");
 });
+
+
+
+
+
+// PROJECTS Intersection Observer
+const projectCards = document.querySelectorAll(".projects__wrapper--card")
+
+
+const options = {
+  threshold: 0.9,
+}
+
+const projectsObserver = new IntersectionObserver (entries => {
+  entries.forEach(entry =>{
+    entry.target.classList.toggle("reveal", entry.isIntersecting)
+
+    if (entry.isIntersecting) {
+      projectsObserver.unobserve(entry.target)
+    }
+  })
+})
+
+projectCards.forEach(card => {
+  projectsObserver.observe(card)
+})
+
+
+
+// Rellax lib
+let rellax = new Rellax('.rellax');
+
+
+// GSAP
+const design = document.querySelectorAll(".design")
+const app = document.querySelectorAll(".app")
+gsap.from(design, {
+  textContent: 0,
+  duration: 3,
+  ease: Expo.easeOut,
+  snap: { textContent: 1 },
+  stagger: 1,
+}
+);
+
+gsap.from(app, {
+  textContent: 0,
+  duration: 3,
+  ease: Expo.easeOut,
+  snap: { textContent: 1 },
+  stagger: 1,
+}
+);
