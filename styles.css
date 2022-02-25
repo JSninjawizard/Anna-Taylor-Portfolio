@@ -282,11 +282,13 @@ html {
 
 .about-me__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .about-me__wrapper--image-container,
-.about-me__wrapper--text { 
+.about-me__wrapper--text {
     flex: 1;
+    flex-basis: 40rem;
 }
 
 .about-me__wrapper--image {
@@ -305,12 +307,12 @@ html {
 }
 
 .about-me__text--main {
-    /* font-size: 1.8rem; */
     font-size: calc(1.5rem + 0.5vw);
+    /* font-size: 1.8rem; */
     margin: 0 calc(3rem + 0.4vw);
     font-family: var(--font-com-sans);
     font-weight: 400;
-    line-height: 4rem;
+    line-height: calc(4rem + 0.5vw);
 }
 
 
@@ -430,7 +432,8 @@ html {
 
 
 .testimonial__message--qmark {
-    font-size: 14rem;
+    /* font-size: 14rem; */
+    font-size: calc(4rem + 8vw);
     display: flex;
     height: 10vh;
     width: 5vw;
@@ -439,6 +442,7 @@ html {
 
 .testimonial__message--text {
     font-size: 2.5rem;
+    font-size: calc(1rem + 1vw);
     margin: 0 10rem;
     font-family: var(--font-com-sans);
     font-weight: 400;
@@ -446,7 +450,8 @@ html {
 }
 
 .testimonial__message--author {
-    font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: calc(1rem + 1vw);
     display: flex;
     height: 10vh;
     width: 20vw;
@@ -513,7 +518,7 @@ label {
 .message__container--label::after {
     content: ":";
     position: absolute;
-    top: 1rem;
+    top: -0.5rem;
 }
 
 /* 1280px */
@@ -535,6 +540,7 @@ input[type="tel"] {
     border: none;
     background-color: var(--bg);
     margin-top: 3rem;
+    width: 100%;
 }
 
 .message__container {
@@ -573,12 +579,12 @@ input[type="tel"] {
     color: black;
     position: relative;
     background-color: var(--bg);
-    font-size: 7rem;
+    /* font-size: 7rem; */
+    font-size: calc(3rem + 2vw);
     font-weight: 600;
     font-family: var(--font-com-sans);
     cursor: pointer;
     transition: all 0.3s ease-in;
-
 }
 
 
@@ -598,7 +604,6 @@ input[type="tel"] {
     transform: scaleX(1);
     transform-origin: left;
     transition: all 0.3s ease-in;
-
 }
 
 .sumbit__container--btn:hover::before {
@@ -609,9 +614,11 @@ input[type="tel"] {
 .footer {
     height: 10vh;
 }
+
 .footer__container {
     display: flex;
     justify-content: space-between;
+    justify-content: flex-end;
     height: 100%;
     align-items: flex-end;
 }
@@ -631,11 +638,186 @@ input[type="tel"] {
     align-items: flex-end;
 }
 
-section {
-    /* min-height: 100vh; */
-    /* min-width: 100vw; */
-    /* border: 1px solid red; */
+/* MEDIA QUERIES */
+/* -=----------------- 1000px ------------------------=- */
+@media screen and (max-width: 1000px) {
+
+    .home::before {
+        background-position: 60% 0;
+    }
+}
+
+/* -=----------------- 850px ------------------------=- */
+@media screen and (max-width: 850px) {
+    .home::before {
+        background-position: 70% 0;
+    }
+
+    .home__wrapper--text {
+        font-size: calc(6rem + 8vw);
+
+    }
+}
+
+/* -=----------------- 800px ------------------------=- */
+@media screen and (max-width: 800px) {
+    .about-me__text--main {
+        /* font-size: ; */
+        margin: calc(10rem + 0.3vh) calc(3rem + 0.4vw);
+    }
+
 }
 
 
+/* -=----------------- 670px ------------------------=- */
+@media screen and (max-width: 670px) {
+    .projects__title,
+    .about-me__title,
+    .skills__title,
+    .skills__title,
+    .testimonials__title,
+    .contact__title {
+        font-size: calc(6rem + 8vw);
+    }
+
+    .design__card,
+    .app__card {
+        font-size: calc(6rem + 7vw);
+    }
+
+
+    /* CONTACT */
+    .contact__container--form {
+        margin-left: 0vw;
+        gap: 3rem;
+    }
+
+    label {
+        font-size: calc(3rem + 7vw);
+        height: 6rem;
+    }
+
+    .message__container--label {
+        padding-top: 2rem;
+        height: auto;
+    }
+
+    .name__container,
+    .email__container,
+    .phone__container,
+    .message__container {
+        display: flex;
+        position: relative;
+        align-items: baseline;
+     }
+
+     .message__container--textarea {
+        width: 100%;
+        height: 40vh;
+        outline: none;
+        resize: none;
+        font-size: calc(3rem + 6vw);
+        font-family: var(--font-com-sans);
+        color: var(--hightlight);
+        caret-color: var(--hightlight);
+        border: none;
+        padding: 0.5rem;
+        background-color: var(--bg);
+    }
+
+    .name__container--label::after,
+    .email__container--label::after,
+    .phone__container--label::after,
+    .message__container--label::after {
+        content: ":";
+        position: absolute;
+        top:2rem;
+    }
+
+    .message__container--label::after {
+        top: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        font-size: calc(3rem + 6vw);
+    }
+
+    .message__container--textarea {
+        font-size: calc(3rem + 6vw);
+    }
+}
+
+/* -=----------------- 600px ------------------------=- */
+@media screen and (max-width: 600px) {
+    .home::before {
+        background-position: 70% 0;
+    }
+
+    .home__wrapper {
+        border: 1px solid salmon;
+        justify-content: center;
+    }
+
+    .home__wrapper--text {
+        font-size: calc(6rem + 8vw);
+        margin-top: 23rem;
+    }
+
+
+    /* TESTIMONIALS */
+    .testimonials__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .testimonial__container--btn-left,
+    .testimonial__container--btn-right {
+        display: none;
+    }
+
+    .cards__container {
+        flex: 1;
+        overflow-x: auto;
+    }
+
+    .testimonial__container--card {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        font-family: var(--font-m-ser);
+    }
+
+    .testimonial__message--qmark {
+        display: flex;
+        height: 2vh;
+        justify-content: center;
+    }
+
+    .testimonial__message--text {
+        font-family: var(--font-com-sans);
+        font-weight: 400;
+        line-height: 3rem;
+        width: 90%;
+        margin-left: 3rem;
+    }
+
+    .testimonial__message--author {
+        /* font-size: 3rem; */
+        font-size: calc(1rem + 1vw);
+        width: auto;
+        height: 1vw;
+        justify-content: flex-start;
+    }
+
+
+.sumbit__container {
+    width: 99vw;
+}
+
+    .sumbit__container--btn::before {
+        height: .5rem;
+    }
+}
 
