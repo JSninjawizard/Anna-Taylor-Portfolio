@@ -73,21 +73,67 @@ const projectCards = document.querySelectorAll(".projects__wrapper--card")
 
 
 const options = {
-  threshold: 0.9,
+  threshold: 0.3,
 }
+console.log(options);
 
-const projectsObserver = new IntersectionObserver (entries => {
-  entries.forEach(entry =>{
+const projectsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     entry.target.classList.toggle("reveal", entry.isIntersecting)
 
     if (entry.isIntersecting) {
       projectsObserver.unobserve(entry.target)
     }
   })
-})
+}, options)
 
 projectCards.forEach(card => {
   projectsObserver.observe(card)
+})
+
+
+// SKILLS Intersection Observer
+// const skillsDesign = document.querySelector(".skills__container--design")
+const skillsDesign = document.querySelectorAll(".design")
+const skillsApp = document.querySelectorAll(".app")
+
+const options1 = {
+  threshold: 0.7,
+}
+
+const skillsObserver = new IntersectionObserver(function (entries, self) {
+  let targets = entries.map(entry => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      self.unobserve(entry.target)
+      return entry.target
+    }
+  })
+
+
+  effects(targets);
+}, options1);
+
+
+function effects(targets) {
+  gsap.from(targets, {
+    textContent: 0,
+    duration: 3,
+    ease: Expo.easeOut,
+    snap: { textContent: 1 },
+    stagger: 1,
+  }
+  );
+}
+
+
+skillsDesign.forEach(el => {
+  skillsObserver.observe(el)
+})
+
+skillsApp.forEach(el => {
+  skillsObserver.observe(el)
 })
 
 
@@ -97,22 +143,30 @@ let rellax = new Rellax('.rellax');
 
 
 // GSAP
-const design = document.querySelectorAll(".design")
-const app = document.querySelectorAll(".app")
-gsap.from(design, {
-  textContent: 0,
-  duration: 3,
-  ease: Expo.easeOut,
-  snap: { textContent: 1 },
-  stagger: 1,
-}
-);
+// const design = document.querySelectorAll(".design")
 
-gsap.from(app, {
-  textContent: 0,
-  duration: 3,
-  ease: Expo.easeOut,
-  snap: { textContent: 1 },
-  stagger: 1,
-}
-);
+// gsap.from(design, {
+//   textContent: 0,
+//   duration: 3,
+//   ease: Expo.easeOut,
+//   snap: { textContent: 1 },
+//   stagger: 1,
+// }
+// );
+
+// const app = document.querySelectorAll(".app")
+// gsap.from(app, {
+//   textContent: 0,
+//   duration: 3,
+//   ease: Expo.easeOut,
+//   snap: { textContent: 1 },
+//   stagger: 1,
+// }
+// );
+
+
+
+
+
+
+

@@ -316,7 +316,7 @@ html {
 
 .about-me__text--main {
     font-size: calc(1.5rem + 0.5vw);
-    /* font-size: 1.8rem; */
+    /* font-size: calc(1rem + 1vw); */
     margin: 0 calc(3rem + 0.4vw);
     font-family: var(--font-com-sans);
     font-weight: 400;
@@ -450,7 +450,8 @@ html {
 
 .testimonial__message--text {
     font-size: 2.5rem;
-    font-size: calc(1rem + 1vw);
+    /* font-size: calc(1rem + 1vw); */
+    font-size: calc(1.5rem + 0.5vw);
     margin: 0 10rem;
     font-family: var(--font-com-sans);
     font-weight: 400;
