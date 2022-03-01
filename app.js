@@ -16,6 +16,30 @@ links.forEach((link) => {
   });
 });
 
+// Hamburger
+const hamburger = document.querySelector(".vertical-navbar__hamburger")
+const navbar = document.querySelector(".vertical-navbar")
+const navLinks = document.querySelectorAll(".vertical-navbar__links--link") //li
+console.log(navLinks);
+
+
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("clicked");
+    if (navbar.classList.contains("clicked")) {
+      navLinks.forEach(link => {
+        link.classList.remove("hide")
+        link.classList.add("reveal")
+      })
+    } else {
+      navLinks.forEach(link => {
+        link.classList.add("hide")
+        link.classList.remove("reveal")
+      })
+    }
+})
+
+
+
 // TESTIMONAILS
 const cardContainer = document.querySelector(".cards__container");
 
