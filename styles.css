@@ -742,6 +742,17 @@ input[type='tel'] {
 
 /* -=----------------- 600px ------------------------=- */
 @media screen and (max-width: 600px) {
+
+    .projects__title,
+    .about-me__title,
+    .skills__title,
+    .skills__title,
+    .testimonials__title,
+    .contact__title {
+      font-size: calc(6rem + 5vw);
+    }
+
+
   /* NAVBAR */
   .vertical-navbar {
     width: 100vw;
