@@ -16,12 +16,17 @@
 
     <!-- MY CSS -->
     <link rel="stylesheet" href="styles.css">
-    <title>V1.5</title>
+    <title>V1.6</title>
 </head>
 
 <body>
-
     <nav class="vertical-navbar">
+        <!-- Hamburger -->
+        <div class="vertical-navbar__hamburger">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
         <!-- Text Links -->
         <ul class="vertical-navbar__links">
             <li class="vertical-navbar__links--link">
@@ -79,7 +84,7 @@
     <!-- /* -=----------------- HOME -------------------------------=- */ -->
     <section id="home" class="home">
         <div class="home__wrapper">
-            <div class="home__wrapper--text">Anna <br>Tyler <span class="text__span">/</span> ux/ui designer</div>
+            <div class="home__wrapper--text rellax" data-rellax-speed="-3">Anna <br>Tyler <span class="text__span">/</span> ux/ui designer</div>
         </div>
     </section>
 
@@ -149,7 +154,9 @@
     <section id="about-me" class="about-me">
         <h1 class="about-me__title">Hello Again</h1>
         <div class="about-me__wrapper">
-            <img src="img/content-img-02.jpg" alt="me" class="about-me__wrapper--image">
+            <div class="about-me__wrapper--image-container">
+                <img src="img/content-img-02.jpg" alt="me" class="about-me__wrapper--image">
+            </div>
             <div class="about-me__wrapper--text">
                 <p class="about-me__text--main">My name is <span>Anna Tyler</span> and I'm passionate about improving
                     the lives of others through design. I'm constantly learning new things everyday and love meeting
@@ -171,34 +178,46 @@
             <div class="skills__container--design">
                 <div class="design__card">
                     <h4 class="print__card--title">print</h4>
-                    <h4 class="print__card--score">90%</h4>
+                    <h4 class="print__card--score">
+                        <span class="design">90</span>%
+                    </h4>
                 </div>
 
                 <div class="design__card">
                     <h4 class="web__card--title">web</h4>
-                    <h4 class="web__card--score">85%</h4>
+                    <h4 class="web__card--score">
+                        <span class="design">85</span>%
+                    </h4>
                 </div>
 
                 <div class="design__card">
                     <h4 class="logo__card--title">logo</h4>
-                    <h4 class="logo__card--score">92%</h4>
+                    <h4 class="logo__card--score">
+                        <span class="design">92</span>%
+                    </h4>
                 </div>
             </div>
 
             <div class="skills__container--app">
                 <div class="app__card">
                     <h4 class="xd__card--title">xd</h4>
-                    <h4 class="xd__card--score">80%</h4>
+                    <h4 class="xd__card--score">
+                        <span class="app">80</span>%
+                    </h4>
                 </div>
 
                 <div class="app__card">
                     <h4 class="ai__card--title">ai</h4>
-                    <h4 class="ai__card--score">95%</h4>
+                    <h4 class="ai__card--score">
+                        <span class="app">95</span>%
+                    </h4>
                 </div>
 
                 <div class="app__card">
                     <h4 class="ps__card--title">ps</h4>
-                    <h4 class="ps__card--score">90%</h4>
+                    <h4 class="ps__card--score">
+                        <span class="app">90</span>%
+                    </h4>
                 </div>
             </div>
 
@@ -321,8 +340,9 @@
         </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="app.js"></script>
 </body>
 

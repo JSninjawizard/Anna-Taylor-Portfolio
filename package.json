@@ -1,0 +1,20 @@
+{
+  "name": "anna-t-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio file",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSninjawizard/ver1.5.git"
+  },
+  "author": "JSNinjaWizard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSninjawizard/ver1.5/issues"
+  },
+  "homepage": "https://github.com/JSninjawizard/ver1.5#readme"
+}
